@@ -8,12 +8,12 @@ public class Main {
         // You send it a code using the orderTheShip method &
         // it sends the order to the right factory for creation
 
-        EnemyShipBuilding MakeUFOs = new UFOEnemyShipBuilding();
+        EnemyShipBuilding enemyShipBuilding = new UFOEnemyShipBuilding();
 
-        EnemyShip theGrunt = MakeUFOs.orderTheShip("UFO");
+        EnemyShip theGrunt = enemyShipBuilding.orderTheShip("UFO");
         System.out.println(theGrunt + "\n");
 
-        EnemyShip theBoss = MakeUFOs.orderTheShip("UFO BOSS");
+        EnemyShip theBoss = enemyShipBuilding.orderTheShip("UFO BOSS");
         System.out.println(theBoss + "\n");
 
     }
