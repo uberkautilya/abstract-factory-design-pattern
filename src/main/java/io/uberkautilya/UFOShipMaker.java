@@ -3,10 +3,10 @@ package io.uberkautilya;
 // want to determine which enemy ships you want to
 // provide as an option to build
 
-public class UFOEnemyShipBuilder extends EnemyShipBuilder {
+public class UFOShipMaker extends ShipMaker {
 
-    protected EnemyShip makeEnemyShip(String typeOfShip) {
-        EnemyShip enemyShip = null;
+    protected Ship makeShip(String typeOfShip) {
+        Ship ship = null;
 
         // If UFO was sent grab use the factory that knows
         // what types of weapons and engines a regular UFO needs.
@@ -14,21 +14,21 @@ public class UFOEnemyShipBuilder extends EnemyShipBuilder {
 
         switch (typeOfShip) {
             case "UFO" -> {
-                EnemyShipFactory shipFactory = new UFOEnemyShipFactory();
-                enemyShip = new UFOEnemyShip(shipFactory);
-                enemyShip.setName("UFO Grunt Ship");
+                ShipFactory shipFactory = new UFOShipFactory();
+                ship = new UFOShip(shipFactory);
+                ship.setName("UFO Grunt Ship");
             }
 
             // If UFO BOSS was sent grab use the factory that knows
             // what types of weapons and engines a Boss UFO needs.
             // The EnemyShip object is returned & given a name
             case "UFO BOSS" -> {
-                EnemyShipFactory shipFactory = new UFOBossEnemyShipFactory();
-                enemyShip = new UFOBossEnemyShip(shipFactory);
-                enemyShip.setName("UFO Boss Ship");
+                ShipFactory shipFactory = new UFOBossShipFactory();
+                ship = new UFOBossShip(shipFactory);
+                ship.setName("UFO Boss Ship");
             }
         }
 
-        return enemyShip;
+        return ship;
     }
 }

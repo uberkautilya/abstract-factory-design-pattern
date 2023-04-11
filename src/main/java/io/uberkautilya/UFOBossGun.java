@@ -1,8 +1,8 @@
 package io.uberkautilya;// Here we define a basic component of a space ship
-// Any part that implements the interface ESEngine
+// Any part that implements the interface ESWeapon
 // can replace that part in any ship
 
-public class ESUFOEngine implements ESEngine{
+public class UFOBossGun implements Weapon {
 
     // EnemyShip contains a reference to the object
     // ESWeapon. It is stored in the field weapon
@@ -13,7 +13,7 @@ public class ESUFOEngine implements ESEngine{
     // the following shows on the screen
 
     public String toString(){
-        return "1000 mph";
+        return "40 damage";
     }
 
 }

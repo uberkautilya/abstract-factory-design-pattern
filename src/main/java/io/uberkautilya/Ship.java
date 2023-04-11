@@ -1,6 +1,6 @@
 package io.uberkautilya;
 
-public abstract class EnemyShip {
+public abstract class Ship {
 
     private String name;
 
@@ -8,8 +8,8 @@ public abstract class EnemyShip {
     // These can be changed easily by assigning new parts
     // in UFOEnemyShipFactory or UFOBossEnemyShipFactory
 
-    ESWeapon weapon;
-    ESEngine engine;
+    Weapon weapon;
+    Engine engine;
 
     public String getName() { return name; }
 

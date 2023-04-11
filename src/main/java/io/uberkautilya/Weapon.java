@@ -1,7 +1,7 @@
 package io.uberkautilya;// Any part that implements the interface ESWeapon
 // can replace that part in any ship
 
-public interface ESWeapon{
+public interface Weapon {
 
     // User is forced to implement this method
     // It outputs the string returned when the

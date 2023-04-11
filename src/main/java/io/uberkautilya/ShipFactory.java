@@ -5,10 +5,10 @@ package io.uberkautilya;// With an Abstract Factory Pattern you won't
 // Here is where you define the parts that are required
 // if an object wants to be an enemy ship
 
-public interface EnemyShipFactory{
+public interface ShipFactory {
 
-    public ESWeapon addESGun();
+    public Weapon addGun();
 
-    public ESEngine addESEngine();
+    public Engine addEngine();
 
 }

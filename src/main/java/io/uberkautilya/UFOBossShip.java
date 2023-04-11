@@ -1,17 +1,17 @@
 package io.uberkautilya;
 
-public class UFOBossEnemyShip extends EnemyShip {
+public class UFOBossShip extends Ship {
 
     // We define the type of ship we want to create by stating we want
     // to use the factory that makes enemy ships
 
-    EnemyShipFactory shipFactory;
+    ShipFactory shipFactory;
 
     // The enemy ship required parts list is sent to this method.
     // They state that the enemy ship must have a weapon and engine assigned.
     // That object also states the specific parts needed to make a Boss UFO versus a Regular UFO
 
-    public UFOBossEnemyShip(EnemyShipFactory shipFactory) {
+    public UFOBossShip(ShipFactory shipFactory) {
         this.shipFactory = shipFactory;
     }
 
@@ -28,8 +28,8 @@ public class UFOBossEnemyShip extends EnemyShip {
         // shipFactory. We are assigning those specific part
         // objects to the UFOBossEnemyShip here
 
-        weapon = shipFactory.addESGun();
-        engine = shipFactory.addESEngine();
+        weapon = shipFactory.addGun();
+        engine = shipFactory.addEngine();
 
     }
 

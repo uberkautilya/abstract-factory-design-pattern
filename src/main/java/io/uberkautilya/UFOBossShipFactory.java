@@ -7,18 +7,18 @@ package io.uberkautilya;// This factory uses the EnemyShipFactory interface
 
 // The returned object specifies a specific weapon & engine
 
-public class UFOBossEnemyShipFactory implements EnemyShipFactory{
+public class UFOBossShipFactory implements ShipFactory {
 
     // Defines the weapon object to associate with the ship
 
-    public ESWeapon addESGun() {
-        return new ESUFOBossGun(); // Specific to Boss UFO
+    public Weapon addGun() {
+        return new UFOBossGun(); // Specific to Boss UFO
     }
 
     // Defines the engine object to associate with the ship
 
-    public ESEngine addESEngine() {
-        return new ESUFOBossEngine(); // Specific to Boss UFO
+    public Engine addEngine() {
+        return new UFOBossEngine(); // Specific to Boss UFO
     }
 
 }
