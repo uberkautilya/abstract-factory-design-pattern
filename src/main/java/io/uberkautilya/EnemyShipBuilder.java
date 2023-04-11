@@ -1,6 +1,6 @@
 package io.uberkautilya;
 
-public abstract class EnemyShipBuilding {
+public abstract class EnemyShipBuilder {
 
     // This acts as an ordering mechanism for creating
     // EnemyShips that have a weapon, engine, name & nothing else
@@ -14,7 +14,7 @@ public abstract class EnemyShipBuilding {
     // are based on the String entered. After the ship is made
     // we execute multiple methods in the EnemyShip Object
 
-    public EnemyShip orderTheShip(String typeOfShip) {
+    public EnemyShip orderShip(String typeOfShip) {
         EnemyShip theEnemyShip = makeEnemyShip(typeOfShip);
 
         theEnemyShip.makeShip();
